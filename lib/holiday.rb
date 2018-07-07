@@ -19,12 +19,13 @@ def second_supply_for_fourth_of_july(holiday_hash)
   # }
   # return the second element in the 4th of July array
   return_event=""
-  holiday_hash.each do |season,holidays|
+  holiday_hash.each  do |season,holidays|
     holidays.each do |holiday,activities|
       if holiday==:fourth_of_july
-        return_event=activities[1]
+        return_event = activities[1]
       end
     end
+
   end
   return_event
 end
@@ -109,7 +110,7 @@ def all_holidays_with_bbq(holiday_hash)
   bbq_day=[]
   holiday_hash.each do |seasons,holidays|
     holidays.each do |holiday,supplies|
-      supplies.collect do |supply|
+      supplies.each do |supply|
         if supply == "BBQ"
           bbq_day << holiday
       end
